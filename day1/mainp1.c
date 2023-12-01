@@ -10,7 +10,8 @@
 // My data has 1000 inputs, so 1000 is enough sums.
 #define MAX_SUMS 1000+1
 
-#define IS_VERBOSE 0
+// If you'll modify this; uncomment to ease debugging.
+// #define IS_VERBOSE 1
 
 int main() {
 	FILE* fp = fopen("input.txt", "rb");
