@@ -7,12 +7,8 @@
 // If larger data needs to be processed, this can be increased.
 #define MAX_READ_SIZE (32 * 1024)
 
-// 256 numbers should be more than enough. 
-// Adjust as required.
-#define MAX_VALS_PER_LINE 256
-
 // My data has 1000 inputs, so 1000 is enough sums.
-#define MAX_SUMS 1000
+#define MAX_SUMS 1000+1
 
 #define IS_VERBOSE 0
 
@@ -23,7 +19,7 @@ int main() {
 		return 1;
 	}
 
-	char buffer[32*1024];
+	char buffer[MAX_READ_SIZE];
 	int n = fread(buffer, sizeof(*buffer), sizeof(buffer), fp);
 
 	if (n == 0) {
