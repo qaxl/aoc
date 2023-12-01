@@ -14,7 +14,7 @@
 // My data has 1000 inputs, so 1000 is enough sums.
 #define MAX_SUMS 1000
 
-#define IS_VERBOSE 1
+#define IS_VERBOSE 0
 
 void insert_value(char array[2], char val) {
 	if (array[0] != 0)
@@ -125,7 +125,7 @@ int main() {
 	for (int i = 0; i < sums_ind; ++i) 
 		sum += sums[i];
 
-	printf("Sum of the values: %lld\n", sum);
+	printf("%lld\n", sum);
 	return 0;
 }
 
